@@ -24,7 +24,7 @@ class HomeTab extends StatelessWidget {
                 );
               }
 
-              // Collection Data ready to display
+
               if (snapshot.connectionState == ConnectionState.done) {
                 // Display the data inside a list view
                 return ListView(
@@ -36,7 +36,7 @@ class HomeTab extends StatelessWidget {
                     return ProductCard(
                       title: document.data()['name'],
                       imageUrl: document.data()['images'][0],
-                      price: "\$${document.data()['price']}",
+                      price: "R\$${document.data()['price']}",
                       productId: document.id,
                     );
                   }).toList(),
